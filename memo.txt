@@ -1,0 +1,14 @@
+・index.php 「バクテリア名からドメイン一覧を表示」「ドメインからバクテリア一覧を表示」
+---
+・domain.php ドメイン名からバクテリアを探す
+・domainId.php domain.phpから呼ばれる
+・domainDetail.php バクテリア一覧を表示
+---
+・bacteria.php バクテリア名からドメインを探す
+・bacteriaId.php bacteria.phpから呼ばれる 入力に基づくバクテリア名と，そのIDを返す
+・bacteriaDetail.php ドメイン一覧と数を表示
+
+・データ準備
+protein_gakumei.txtから学名だけ抽出，重複削除⇒speciesテーブルに格納(idはauto_increment)
+mk_final.pyはdomainをファイル名，内容を種名としている
+⇒種名(id)をファイル名，domainを内容とするファイルも同時に生成すればよい
