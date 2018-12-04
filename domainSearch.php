@@ -1,9 +1,10 @@
 <?php
-require("common.php");
+$mysqli = new mysqli('localhost', 'root', '', 'bacteria_domain');
 
 $name = $_POST["name"];
-$sql = "SELECT * FROM domain WHERE name LIKE '%" . $name. "%';";
+$sql = "SELECT * FROM domain WHERE name LIKE '%" . $name. "%'";
 $result = $mysqli->query($sql);
+$output = "";
 echo "<tr>";
 echo "<th>ID</th>";
 echo "<th>name</th>";
@@ -15,7 +16,7 @@ while ($row = $result->fetch_assoc()) {
     echo "<tr>";
     echo "<td>{$id}</td>";
     echo "<td>{$name}</td>";
-    echo "<td><a href='domainDetail.php?id={$id}'>link</a></td>";
+    echo "<td><a href='bacteria.php?{$id}'>link</a></td>";
     echo "</tr>";
 }
 // 結果セットを閉じる

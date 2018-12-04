@@ -1,5 +1,6 @@
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="common.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
@@ -11,7 +12,7 @@
 2. Protein domains including the characters (input at 1.) are shown.<br>
 3. If you click the link, bacteria having that protein domain are shown.<br><br>
 
-<h3>Search Bacterias</h3>
+<h3>Search Domains</h3>
 <p id="text">please input protein domain name (a part is OK) and click "Search" button.</p>
 <input id="name" name="name">
 <button id="search">Search</button>
